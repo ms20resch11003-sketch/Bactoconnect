@@ -1,0 +1,112 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #005c23; /* Dark Green for Cellulose theme */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #005c23;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1532187891997-584ad7938951?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.hero h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #a8e6cf; }
+.legacy { font-style: italic; margin-bottom: 2rem; opacity: 0.9; }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #005c23;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+    transition: background 0.3s;
+}
+
+.btn.secondary { background: #f39c12; }
+.btn:hover { opacity: 0.9; }
+
+/* Sections */
+section { padding: 4rem 10%; text-align: center; }
+.dark-section { background: #f9f9f9; }
+
+.container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+}
+
+footer {
+    padding: 2rem;
+    background: #222;
+    color: white;
+    text-align: center;
+}
