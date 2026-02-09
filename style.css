@@ -21,14 +21,15 @@ nav {
     background: #fff;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #005c23; /* Dark Green for Cellulose theme */
+    color: #005c23;
+    /* Dark Green for Cellulose theme */
 }
 
 nav ul {
@@ -65,9 +66,22 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-.hero h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #a8e6cf; }
-.legacy { font-style: italic; margin-bottom: 2rem; opacity: 0.9; }
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #a8e6cf;
+}
+
+.legacy {
+    font-style: italic;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
 
 /* Buttons */
 .btn {
@@ -81,12 +95,23 @@ nav ul li a:hover {
     transition: background 0.3s;
 }
 
-.btn.secondary { background: #f39c12; }
-.btn:hover { opacity: 0.9; }
+.btn.secondary {
+    background: #f39c12;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
 
 /* Sections */
-section { padding: 4rem 10%; text-align: center; }
-.dark-section { background: #f9f9f9; }
+section {
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+.dark-section {
+    background: #f9f9f9;
+}
 
 .container {
     display: flex;
@@ -99,7 +124,7 @@ section { padding: 4rem 10%; text-align: center; }
     background: white;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     flex: 1;
     min-width: 300px;
 }
@@ -109,4 +134,501 @@ footer {
     background: #222;
     color: white;
     text-align: center;
+}
+
+/* Founder Section Styles */
+.founder-section {
+    background-color: #ffffff;
+    padding: 60px 10%;
+    border-bottom: 1px solid #eee;
+}
+
+.founder-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    /* Aligns text for better readability */
+}
+
+.founder-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* Makes the photo circular */
+    object-fit: cover;
+    border: 5px solid #a8e6cf;
+    /* Light green border */
+}
+
+.founder-text h2 {
+    color: #005c23;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.founder-name {
+    margin-bottom: 0;
+    color: #333;
+}
+
+.founder-title {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .founder-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Styling for the Group Links */
+.group-link,
+.footer-link {
+    color: #005c23;
+    /* Matching your dark green theme */
+    text-decoration: none;
+    /* Removes the underline */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.group-link:hover,
+.footer-link:hover {
+    color: #f39c12;
+    /* Changes to amber/orange on hover */
+    text-decoration: underline;
+}
+
+.footer-link {
+    color: #a8e6cf;
+    /* Lighter green for the dark footer background */
+}
+
+/* Speakers Section */
+.speakers-section {
+    padding: 60px 10%;
+    background-color: #fdfdfd;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.year-heading {
+    text-align: left;
+    color: #005c23;
+    border-left: 5px solid #f39c12;
+    padding-left: 15px;
+    margin: 40px 0 20px 0;
+}
+
+/* The Grid Layout */
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Speaker Card */
+.speaker-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+}
+
+.speaker-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(20%);
+}
+
+.speaker-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.speaker-info h4 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.affiliation {
+    font-size: 0.9rem;
+    color: #005c23;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.topic {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+.speakers-section {
+    padding: 60px 10%;
+    background-color: #f9fbf9;
+    /* Very light green tint */
+}
+
+.year-heading {
+    color: #005c23;
+    font-size: 2rem;
+    margin: 50px 0 30px;
+    text-align: left;
+    border-bottom: 2px solid #a8e6cf;
+    display: inline-block;
+}
+
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.speaker-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.speaker-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.speaker-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.speaker-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.speaker-title {
+    font-size: 0.9rem;
+    color: #f39c12;
+    /* Amber color for the title */
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.affiliation {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.bio {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Schedule Section Styles */
+.schedule-section {
+    padding: 60px 10%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.schedule-table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+    /* Ensures table is scrollable on small mobile screens */
+}
+
+.schedule-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-table thead {
+    background-color: #005c23;
+    color: white;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 18px 25px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f9fbf9;
+}
+
+/* Highlight the actual conference day */
+.highlight-row {
+    background-color: #fff9eb;
+    /* Light amber tint */
+    color: #333;
+}
+
+.highlight-row td {
+    border-left: 5px solid #f39c12;
+    /* Amber accent */
+}
+
+@media (max-width: 600px) {
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Upcoming 2026 Section */
+.upcoming-section {
+    padding: 60px 10%;
+    background-color: #f4f7f4;
+}
+
+.upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.upcoming-card {
+    background: #fff;
+    padding: 40px 25px 25px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.upcoming-card:hover {
+    transform: translateY(-10px);
+    border-color: #005c23;
+}
+
+/* The "Upcoming" Badge */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #005c23;
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.upcoming-card h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.upcoming-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 2026 Speakers Section */
+.speakers-2026-section {
+    padding: 80px 10%;
+    background-color: #ffffff;
+}
+
+.speaker-2026-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.speaker-2026-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.speaker-2026-card:hover {
+    transform: scale(1.03);
+}
+
+.image-container {
+    position: relative;
+    height: 300px;
+    background: #f0f0f0;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Confirmed Badge */
+.status-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #005c23;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.speaker-2026-details {
+    padding: 25px;
+}
+
+.speaker-2026-details h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.role {
+    color: #f39c12;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin: 10px 0 5px;
+}
+
+.org {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* TBA Styles */
+.tba-placeholder {
+    font-size: 5rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: bold;
+}
+
+.speaker-2026-card.tba {
+    opacity: 0.8;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #005c23;
+    /* Cellulose Green */
+}
+
+/* Special styling for the Register link in the nav */
+.nav-cta {
+    background-color: #005c23;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    margin-left: 2rem !important;
+}
+
+.nav-cta:hover {
+    background-color: #f39c12;
+    /* Changes to Amber on hover */
+}
+
+/* Ensure smooth scrolling when clicking links */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Prevents the sticky nav from covering section headings */
 }
