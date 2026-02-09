@@ -632,3 +632,40 @@ html {
     scroll-padding-top: 80px;
     /* Prevents the sticky nav from covering section headings */
 }
+
+/* Social Links in Nav */
+.social-icon a {
+    font-size: 0.85rem;
+    color: #005c23;
+    font-weight: bold;
+}
+
+/* Footer Social Styling */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-socials {
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: #a8e6cf;
+    /* Light green for dark background */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #f39c12;
+    /* Amber hover */
+}
+
+.divider {
+    color: #555;
+    margin: 0 10px;
+}
