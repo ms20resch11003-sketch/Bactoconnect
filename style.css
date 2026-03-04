@@ -669,3 +669,265 @@ html {
     color: #555;
     margin: 0 10px;
 }
+/* Hero Banner Main Structure */
+.hero-banner {
+    position: relative;
+    height: 90vh; /* Banner covers 90% of viewport height */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Center content overlay vertically */
+    justify-content: center; /* Center content overlay horizontally */
+}
+
+/* Three Side-by-Side Images Grid */
+.image-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 1; /* Images stay behind content */
+}
+
+.image-panel {
+    flex: 1; /* Each panel takes up 1/3 of the width */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(60%); /* Subtle darkening for overall banner feel */
+}
+
+/* Customize specific panels (Optional: if images are too bright) */
+.panel-2 {
+    filter: brightness(50%); /* Darken center panel slightly more */
+}
+
+/* Solid Background Content Overlay */
+.content-overlay {
+    position: relative;
+    z-index: 2; /* Sits above the image grid */
+    background-color: rgba(0, 0, 0, 0.85); /* Solid dark background with slight transparency for depth */
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    width: 90%;
+    border: 1px solid rgba(255,255,255,0.1); /* Subtle definition border */
+}
+
+.content-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.content-overlay .badge {
+    background-color: #005c23; /* Dark green theme */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.legacy {
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    margin: 15px 0 30px;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #005c23; /* Dark green */
+}
+
+.btn.secondary {
+    background-color: #f39c12; /* Amber orange */
+}
+
+/* Social Icon Styling in Nav */
+.social-icon a {
+    font-size: 1.2rem;
+    color: #005c23;
+    transition: color 0.3s;
+}
+
+.social-icon a:hover {
+    color: #f39c12; /* Changes to amber on hover */
+}
+/* Sponsors Section */
+.sponsors-section {
+    padding: 60px 10%;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #eee; /* Adds a subtle separator line */
+}
+
+.sponsor-tier {
+    margin-bottom: 50px;
+}
+
+/* Tier Titles with distinct colors */
+.tier-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.tier-title.platinum {
+    color: #444;
+    border-bottom: 2px solid #e5e4e2; /* Platinum color */
+}
+
+.tier-title.gold {
+    color: #b8860b;
+    border-bottom: 2px solid #ffd700; /* Gold color */
+}
+
+.tier-title.silver {
+    color: #666;
+    border-bottom: 2px solid #c0c0c0; /* Silver color */
+}
+
+/* Flexbox Grid for Logos */
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Adjusting sizes based on tier */
+.platinum-grid .sponsor-logo img { max-width: 250px; }
+.gold-grid .sponsor-logo img { max-width: 200px; }
+.silver-grid .sponsor-logo img { max-width: 150px; }
+
+/* The Logo Image Styling & Hover Effect */
+.sponsor-logo img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%) opacity(70%);
+    transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover img {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.05);
+}
+/* Contact Section */
+.contact-section {
+    padding: 80px 10%;
+    background-color: #f4f7f4; /* Light green-gray background */
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* Left Side: Info */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    background-color: #005c23; /* Cellulose Dark Green */
+    color: white;
+}
+
+.contact-info h3 {
+    color: #a8e6cf;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-info p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #f39c12; /* Amber */
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Right Side: Form */
+.contact-form-box {
+    flex: 1.5;
+    min-width: 300px;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #005c23;
+    box-shadow: 0 0 5px rgba(0, 92, 35, 0.2);
+}
+
+.contact-form button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 15px;
+    cursor: pointer;
+}
