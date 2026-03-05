@@ -483,36 +483,48 @@ footer {
     line-height: 1.6;
 }
 
-/* 2026 Speakers Section */
+/* --- ADVANCED 2026 SPEAKERS SECTION --- */
+
 .speakers-2026-section {
-    padding: 80px 10%;
-    background-color: #ffffff;
+    padding: 100px 10%;
+    /* Subtle premium gradient background */
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7f4 100%);
 }
 
 .speaker-2026-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 30px;
+    /* Forces exactly 2 columns on desktop */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     margin-top: 50px;
 }
 
+/* Advanced Card Styling */
 .speaker-2026-card {
     background: #fff;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+    display: flex;
+    /* Makes the card horizontal (Image left, text right) */
+    flex-direction: row;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 92, 35, 0.08);
+    /* Advanced bouncy hover transition */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .speaker-2026-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 92, 35, 0.15);
+    border-color: #a8e6cf;
 }
 
+/* Image Container (Left Side) */
 .image-container {
     position: relative;
-    height: 300px;
-    background: #f0f0f0;
+    flex: 0 0 40%;
+    /* Image takes exactly 40% of the card width */
+    min-height: 250px;
 }
 
 .image-container img {
@@ -521,62 +533,92 @@ footer {
     object-fit: cover;
 }
 
-/* Confirmed Badge */
+/* Premium Glassmorphism Badge */
 .status-tag {
     position: absolute;
-    bottom: 15px;
+    top: 15px;
     left: 15px;
-    background: #005c23;
+    background: rgba(0, 92, 35, 0.8);
+    backdrop-filter: blur(8px);
+    /* Blurs the image behind the tag */
+    -webkit-backdrop-filter: blur(8px);
     color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-size: 0.8rem;
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-weight: bold;
 }
 
+/* Details Container (Right Side) */
 .speaker-2026-details {
-    padding: 25px;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
 .speaker-2026-details h3 {
-    margin: 0;
-    color: #333;
+    margin: 0 0 5px 0;
+    color: #222;
     font-size: 1.4rem;
 }
 
 .role {
     color: #f39c12;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    margin: 10px 0 5px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
 .org {
     font-size: 0.9rem;
     color: #777;
     margin-bottom: 15px;
+    font-style: italic;
 }
 
 .desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: #555;
 }
 
-/* TBA Styles */
+/* TBA Placeholder Styling */
 .tba-placeholder {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     font-weight: bold;
+    background: #f0f0f0;
 }
 
-.speaker-2026-card.tba {
-    opacity: 0.8;
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 950px) {
+    .speaker-2026-grid {
+        /* Drops to 1 column on tablets and phones */
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .speaker-2026-card {
+        /* On very small phones, stack the image on top of the text */
+        flex-direction: column;
+    }
+
+    .image-container {
+        flex: auto;
+        height: 250px;
+    }
 }
 
 /* Navigation Styling */
@@ -669,15 +711,19 @@ html {
     color: #555;
     margin: 0 10px;
 }
+
 /* Hero Banner Main Structure */
 .hero-banner {
     position: relative;
-    height: 90vh; /* Banner covers 90% of viewport height */
+    height: 90vh;
+    /* Banner covers 90% of viewport height */
     width: 100%;
     overflow: hidden;
     display: flex;
-    align-items: center; /* Center content overlay vertically */
-    justify-content: center; /* Center content overlay horizontally */
+    align-items: center;
+    /* Center content overlay vertically */
+    justify-content: center;
+    /* Center content overlay horizontally */
 }
 
 /* Three Side-by-Side Images Grid */
@@ -688,35 +734,42 @@ html {
     width: 100%;
     height: 100%;
     display: flex;
-    z-index: 1; /* Images stay behind content */
+    z-index: 1;
+    /* Images stay behind content */
 }
 
 .image-panel {
-    flex: 1; /* Each panel takes up 1/3 of the width */
+    flex: 1;
+    /* Each panel takes up 1/3 of the width */
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(60%); /* Subtle darkening for overall banner feel */
+    filter: brightness(60%);
+    /* Subtle darkening for overall banner feel */
 }
 
 /* Customize specific panels (Optional: if images are too bright) */
 .panel-2 {
-    filter: brightness(50%); /* Darken center panel slightly more */
+    filter: brightness(50%);
+    /* Darken center panel slightly more */
 }
 
 /* Solid Background Content Overlay */
 .content-overlay {
     position: relative;
-    z-index: 2; /* Sits above the image grid */
-    background-color: rgba(0, 0, 0, 0.85); /* Solid dark background with slight transparency for depth */
+    z-index: 2;
+    /* Sits above the image grid */
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Solid dark background with slight transparency for depth */
     padding: 60px;
     border-radius: 10px;
     text-align: center;
     color: #ffffff;
     max-width: 800px;
     width: 90%;
-    border: 1px solid rgba(255,255,255,0.1); /* Subtle definition border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle definition border */
 }
 
 .content-overlay h1 {
@@ -726,7 +779,8 @@ html {
 }
 
 .content-overlay .badge {
-    background-color: #005c23; /* Dark green theme */
+    background-color: #005c23;
+    /* Dark green theme */
     color: white;
     padding: 3px 10px;
     border-radius: 5px;
@@ -736,7 +790,7 @@ html {
 .legacy {
     font-style: italic;
     font-weight: 300;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     margin: 15px 0 30px;
 }
 
@@ -753,11 +807,13 @@ html {
     text-decoration: none;
     font-weight: bold;
     color: white;
-    background-color: #005c23; /* Dark green */
+    background-color: #005c23;
+    /* Dark green */
 }
 
 .btn.secondary {
-    background-color: #f39c12; /* Amber orange */
+    background-color: #f39c12;
+    /* Amber orange */
 }
 
 /* Social Icon Styling in Nav */
@@ -768,14 +824,17 @@ html {
 }
 
 .social-icon a:hover {
-    color: #f39c12; /* Changes to amber on hover */
+    color: #f39c12;
+    /* Changes to amber on hover */
 }
+
 /* Sponsors Section */
 .sponsors-section {
     padding: 60px 10%;
     background-color: #ffffff;
     text-align: center;
-    border-top: 1px solid #eee; /* Adds a subtle separator line */
+    border-top: 1px solid #eee;
+    /* Adds a subtle separator line */
 }
 
 .sponsor-tier {
@@ -794,17 +853,20 @@ html {
 
 .tier-title.platinum {
     color: #444;
-    border-bottom: 2px solid #e5e4e2; /* Platinum color */
+    border-bottom: 2px solid #e5e4e2;
+    /* Platinum color */
 }
 
 .tier-title.gold {
     color: #b8860b;
-    border-bottom: 2px solid #ffd700; /* Gold color */
+    border-bottom: 2px solid #ffd700;
+    /* Gold color */
 }
 
 .tier-title.silver {
     color: #666;
-    border-bottom: 2px solid #c0c0c0; /* Silver color */
+    border-bottom: 2px solid #c0c0c0;
+    /* Silver color */
 }
 
 /* Flexbox Grid for Logos */
@@ -817,9 +879,17 @@ html {
 }
 
 /* Adjusting sizes based on tier */
-.platinum-grid .sponsor-logo img { max-width: 250px; }
-.gold-grid .sponsor-logo img { max-width: 200px; }
-.silver-grid .sponsor-logo img { max-width: 150px; }
+.platinum-grid .sponsor-logo img {
+    max-width: 250px;
+}
+
+.gold-grid .sponsor-logo img {
+    max-width: 200px;
+}
+
+.silver-grid .sponsor-logo img {
+    max-width: 150px;
+}
 
 /* The Logo Image Styling & Hover Effect */
 .sponsor-logo img {
@@ -833,10 +903,12 @@ html {
     filter: grayscale(0%) opacity(100%);
     transform: scale(1.05);
 }
+
 /* Contact Section */
 .contact-section {
     padding: 80px 10%;
-    background-color: #f4f7f4; /* Light green-gray background */
+    background-color: #f4f7f4;
+    /* Light green-gray background */
 }
 
 .contact-container {
@@ -846,7 +918,7 @@ html {
     margin-top: 40px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
@@ -855,7 +927,8 @@ html {
     flex: 1;
     min-width: 300px;
     padding: 40px;
-    background-color: #005c23; /* Cellulose Dark Green */
+    background-color: #005c23;
+    /* Cellulose Dark Green */
     color: white;
 }
 
@@ -876,14 +949,15 @@ html {
 }
 
 .contact-info a:hover {
-    color: #f39c12; /* Amber */
+    color: #f39c12;
+    /* Amber */
 }
 
 .map-container {
     margin-top: 20px;
     border-radius: 8px;
     overflow: hidden;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Right Side: Form */
@@ -905,8 +979,8 @@ html {
     font-weight: 600;
 }
 
-.form-group input, 
-.form-group select, 
+.form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
@@ -917,8 +991,8 @@ html {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus, 
-.form-group select:focus, 
+.form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #005c23;
@@ -930,4 +1004,223 @@ html {
     font-size: 1.1rem;
     padding: 15px;
     cursor: pointer;
+}
+
+/* Industry Participants Section */
+.industry-section {
+    padding: 60px 10%;
+    background-color: #fafafa;
+    /* Very light gray to separate from white sections */
+    text-align: center;
+}
+
+.industry-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    /* Vertically centers logos of different heights */
+}
+
+.industry-logo {
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.industry-logo img {
+    width: 100%;
+    height: auto;
+    max-height: 70px;
+    /* Prevents logos from getting too tall */
+    object-fit: contain;
+    /* Ensures the logo isn't stretched or squished */
+    filter: grayscale(100%);
+    /* Optional: makes them look uniform */
+    transition: filter 0.3s ease;
+}
+
+.industry-logo:hover img {
+    filter: grayscale(0%);
+    /* Brings color back on hover */
+}
+
+/* Industry Sectors Tags */
+.industry-sectors {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.industry-sectors p {
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.sector-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sector-tag {
+    background-color: #e8f5e9;
+    /* Very light green */
+    color: #005c23;
+    /* Cellulose green */
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #a8e6cf;
+}
+
+/* --- Base Navigation Styles --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #005c23;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #005c23;
+}
+
+/* --- Dropdown Styling (Desktop) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #005c23;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Mobile Menu Elements (Hidden on Desktop) --- */
+.menu-checkbox {
+    display: none;
+    /* Always hide the actual checkbox */
+}
+
+.hamburger {
+    display: none;
+    /* Hide the icon on desktop */
+    font-size: 28px;
+    cursor: pointer;
+    color: #005c23;
+}
+
+/* --- Mobile View Styling (Screens smaller than 900px) --- */
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+        /* Show the icon */
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide the links by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        /* Adjust based on navbar height */
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    /* When the checkbox is clicked, show the menu */
+    .menu-checkbox:checked~.nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    /* Adjust dropdown for mobile */
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #f9fbf9;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        /* Expands inline on mobile */
+    }
+
+    .nav-cta {
+        display: inline-block;
+        margin-top: 10px;
+    }
 }

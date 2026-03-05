@@ -4,45 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bact-o-connect 2026 | IIT Hyderabad</title>
+    <title>Bact-O-Connect 2026 | IIT Hyderabad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">Bact-o-connect '26</div>
-        <ul>
+    <nav class="navbar">
+        <div class="logo">Bact-O-Connect '26</div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+        <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#upcoming-2026">Highlights</a></li>
             <li><a href="#speakers-2026">Speakers</a></li>
-            <li><a href="#history">Past Editions</a></li>
+
+            <li class="dropdown">
+                <a href="#more" class="dropbtn">Explore ▾</a>
+                <div class="dropdown-content">
+                    <a href="#upcoming-2026">Highlights</a>
+                    <a href="#competition">Competition</a>
+                    <a href="#industry">Industry</a>
+                    <a href="#sponsors">Sponsors</a>
+                    <a href="#history">Past Editions</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </li>
+
             <li><a href="#registration" class="nav-cta">Register</a></li>
-            <li><a href="#competition">Competition</a></li>
             <li class="social-icon"><a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
             <li class="social-icon"><a href="https://instagram.com/your-handle" target="_blank">Instagram</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero-banner">
-    <div class="image-grid">
-        <div class="image-panel panel-1" style="background-image: url('BC.png');"></div>
-        
-    </div>
+        <div class="image-grid">
+            <div class="image-panel panel-1" style="background-image: url('BC.png');"></div>
 
-    <div class="content-overlay">
-        <h1>Bact-o-connect 2026</h1>
-        <p><span class=> </span> Connecting the Bacterial Cellulose Community</p>
-        <h3>April 27, 2026 | IIT Hyderabad</h3>
-        <p class="legacy">Commemorating the Birthday of A.J. Brown</p>
-        <div class="cta-buttons">
-            <a href="#registration" class="btn">Register Now</a>
-            
         </div>
-    </div>
-</header>
+
+        <div class="content-overlay">
+            <h1>Bact-O-Connect 2026-Hybrid mode</h1>
+            <p><span class=> </span> Connecting the Bacterial Cellulose Community</p>
+            <h3>April 27, 2026 | IIT Hyderabad</h3>
+            <p class="legacy">Commemorating the Birthday of A.J. Brown</p>
+            <div class="cta-buttons">
+                <a href="#registration" class="btn">Register Now</a>
+
+            </div>
+        </div>
+    </header>
 
     <section id="about">
         <h2>About the Conference</h2>
@@ -60,8 +73,8 @@
             <div class="founder-text">
                 <h2>Message from the Founder</h2>
                 <p class="quote">
-                    "Welcome to Bactoconnect 2026. The Cellulose and Composite Group at IIT Hyderabad is delighted to
-                    announce the second edition of BactoConnect - an annual conference dedicated to fostering global
+                    "Welcome to Bact-O-Connect 2026. The Cellulose and Composite Group at IIT Hyderabad is delighted to
+                    announce the second edition of Bact-O-Connect - an annual conference dedicated to fostering global
                     dialogue and collaboration around bacterial cellulose, a remarkable and sustainable biopolymer with
                     transformative potential across industries.
 
@@ -73,25 +86,25 @@
                     cellulose, April 27th is celebrated as a special day by our group.."
                 </p>
                 <p class="founder-name"><strong>Prof. Mudrika Khandelwal</strong></p>
-                <p class="founder-title">Founder, Bact-o-connect<br>Cellulose and Composite Group, IIT Hyderabad</p>
+                <p class="founder-title">Founder, Bact-O-Connect<br>Cellulose and Composite Group, IIT Hyderabad</p>
             </div>
         </div>
     </section>
     <section id="sponsors" class="sponsors-section">
-    <div class="container">
-        <h2>Supported By</h2>
-        <p class="section-subtitle">Thank you to our generous partners making Bact-o-connect 2026 possible.</p>
+        <div class="container">
+            <h2>Supported By</h2>
+            <p class="section-subtitle">Thank you to our generous partners making Bact-O-Connect 2026 possible.</p>
 
-        <div class="sponsor-tier">
-            
-            <div class="sponsor-grid platinum-grid">
-                <a href="#" target="_blank" class="sponsor-logo"><img src="bioweg.webp"></a>
-               
+            <div class="sponsor-tier">
+
+                <div class="sponsor-grid platinum-grid">
+                    <a href="#" target="_blank" class="sponsor-logo"><img src="bioweg.webp"></a>
+
+                </div>
             </div>
-        </div>  
-        
-    </div>
-</section>
+
+        </div>
+    </section>
     <section id="schedule" class="schedule-section">
         <div class="container">
             <h2>Important Dates & Schedule</h2>
@@ -138,14 +151,14 @@
                     <span class="badge">Upcoming</span>
                     <div class="card-icon">🔬</div>
                     <h4>Inauguration</h4>
-                    <p>Large-scale Bacterial cellulose production Facilite.</p>
+                    <p>Piolt-scale Bacterial cellulose production Facilite.</p>
                 </div>
 
                 <div class="upcoming-card">
                     <span class="badge">Upcoming</span>
                     <div class="card-icon">🎨</div>
                     <h4>Design Competition</h4>
-                    <p>A platform for students and researchers to showcase innovative products made from BC—from
+                    <p>A platform for students and researchers to showcase their innovative products made from BC—from
                         textiles to packaging.</p>
                 </div>
 
@@ -168,7 +181,7 @@
         </div>
     </section>
 
-    
+
     <section id="history" class="speakers-section">
         <h2>Our Legacy: Previous Speakers</h2>
 
@@ -211,6 +224,21 @@
         <h3 class="year-heading">Bactoconnect 2024</h3>
         <div class="speaker-grid">
             <div class="speaker-card">
+                <img src="Parteek.avif" alt="Parteek Mahalwar">
+                <div class="speaker-info">
+                    <h4>Parteek Mahalwar</h4>
+                    <p class="affiliation">Founder and CEO</p>
+                    <p class="speaker-title">Bioweg, CA</p>
+                    <p class="bio">Prateek founded BIOWEG (formerly Cellulosic Technologies) in 2019 with a mission to
+                        eliminate intentionally added microplastics from consumer products. Under his leadership,
+                        BIOWEG has developed a proprietary platform that uses precision fermentation to convert
+                        agricultural
+                        and food industry side-streams (like potato peels and sugar by-products) into high-purity
+                        bacterial
+                        cellulose..</p>
+                </div>
+            </div>
+            <div class="speaker-card">
                 <img src="zuzana.webp" alt="Zuzana Gombosova">
                 <div class="speaker-info">
                     <h4>Zuzana Gombosova</h4>
@@ -242,23 +270,6 @@
                         efficiencies to the cellulose industry.</p>
                 </div>
             </div>
-
-            <div class="speaker-card">
-                <img src="Parteek.avif" alt="Parteek Mahalwar">
-                <div class="speaker-info">
-                    <h4>Parteek Mahalwar</h4>
-                    <p class="affiliation">Founder and CEO</p>
-                    <p class="speaker-title">Bioweg, CA</p>
-                    <p class="bio">Prateek founded BIOWEG (formerly Cellulosic Technologies) in 2019 with a mission to
-                        eliminate intentionally added microplastics from consumer products. Under his leadership,
-                        BIOWEG has developed a proprietary platform that uses precision fermentation to convert
-                        agricultural
-                        and food industry side-streams (like potato peels and sugar by-products) into high-purity
-                        bacterial
-                        cellulose..</p>
-                </div>
-            </div>
-
             <div class="speaker-card">
                 <img src="mudrika.jpg" alt="Mudrika Khandelwaal">
                 <div class="speaker-info">
@@ -284,27 +295,27 @@
             <div class="speaker-2026-grid">
                 <div class="speaker-2026-card">
                     <div class="image-container">
-                        <img src="speaker-2026-1.jpg" alt="Speaker Name">
-                        <div class="status-tag">Confirmed</div>
+                        <img src="momento.jpeg" alt="Speaker Name">
+                        <div class="status-tag">Upcoming</div>
                     </div>
                     <div class="speaker-2026-details">
-                        <h3>[Speaker Name]</h3>
+                        <h3>To Be Announced</h3>
                         <p class="role">Keynote Speaker</p>
                         <p class="org">University / Institute Name</p>
-                        <p class="desc">Leading expert in sustainable polymers and bacterial cellulose engineering.</p>
+                        <p class="desc">Wait for the reveal!</p>
                     </div>
                 </div>
 
                 <div class="speaker-2026-card">
                     <div class="image-container">
-                        <img src="speaker-2026-2.jpg" alt="Speaker Name">
-                        <div class="status-tag">Confirmed</div>
+                        <img src="momento.jpeg" alt="Speaker Name">
+                        <div class="status-tag">Upcoming</div>
                     </div>
                     <div class="speaker-2026-details">
-                        <h3>[Speaker Name]</h3>
+                        <h3>To Be Announced</h3>
                         <p class="role">Invited Speaker</p>
-                        <p class="org">Global Biomaterials Lab</p>
-                        <p class="desc">Pioneering research in BC-based electronic skin and medical diagnostics.</p>
+                        <p class="org">Wait for the reveal!</p>
+                        <p class="desc"></p>
                     </div>
                 </div>
 
@@ -333,93 +344,141 @@
         </div>
     </section>
 
+    <section id="industry" class="industry-section">
+        <div class="container">
+            <h2>Industry Presence</h2>
+            <p class="section-subtitle">Bact-o-connect proudly hosts innovators and professionals from leading global
+                organizations.</p>
 
+            <div class="industry-grid">
+                <div class="industry-logo">
+                    <img src="bioweg.webp" alt="Participating Company 1">
+                </div>
+                <div class="industry-logo">
+                    <img src="Foamlab.png" alt="Participating Company 2">
+                </div>
+                <div class="industry-logo">
+                    <img src="Malai.jpg" alt="Participating Company 3">
+                </div>
+                <div class="industry-logo">
+                    <img src="Adityabirla.jpg" alt="Participating Company 4">
+                </div>
+                <div class="industry-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Company+5" alt="Participating Company 5">
+                </div>
+                <div class="industry-logo">
+                    <img src="https://via.placeholder.com/160x80?text=Company+6" alt="Participating Company 6">
+                </div>
+            </div>
+
+            <div class="industry-sectors">
+                <p><strong>Represented Sectors:</strong></p>
+                <div class="sector-tags">
+                    <span class="sector-tag">Biomaterials</span>
+                    <span class="sector-tag">Sustainable Textiles</span>
+                    <span class="sector-tag">Advanced Packaging</span>
+                    <span class="sector-tag">Healthcare & Cosmetics</span>
+                    <span class="sector-tag">Polymer Science</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="registration" class="dark-section">
         <div class="container">
             <div class="box">
                 <h2>Join Us</h2>
                 <p>Secure your spot at the conference to engage with leading researchers in the field of BC.</p>
-                <a href="https://forms.google.com/your-registration-link" target="_blank" class="btn">Access
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScs1b2RatxmhOcDmn8ORXrdmEqw7DWAB60aA6hK7sQPaLKH_w/viewform?usp=publish-editor"
+                    target="_blank" class="btn">Access
                     Registration Form</a>
             </div>
 
             <div id="competition" class="box">
                 <h2>Competition Uploads</h2>
                 <p>Participating in the research competition? Please upload your posters or abstracts here.</p>
-                <a href="https://your-upload-portal.com" target="_blank" class="btn secondary">Upload Portal</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScPDMXdw0J4GAPsRuAGbq691XhE1ywM0mpiYNhMjo6DJ6mZGw/viewform?usp=publish-editor"
+                    target="_blank" class="btn secondary">Upload Portal</a>
             </div>
         </div>
     </section>
-<section id="contact" class="contact-section">
-    <div class="container">
-        <h2>Get In Touch</h2>
-        <p class="section-subtitle">Have questions about Bactoconnect 2026? We are here to help.</p>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Have questions about Bact_O-Connect 2026? We are here to help.</p>
 
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="info-item">
-                    <h3>📍 Location</h3>
-                    <p>Cellulose and Composite Group<br>
-                    Indian Institute of Technology (IIT) Hyderabad<br>
-                    Kandi, Sangareddy, Telangana 502284</p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Location</h3>
+                        <p>Cellulose and Composite Group<br>
+                            Indian Institute of Technology (IIT) Hyderabad<br>
+                            Kandi, Sangareddy, Telangana 502284</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:bactoconnect@gmail.com">bactoconnect@gmail.com</a></p>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.1118331165184!2d78.12051661536761!3d17.596009887953265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbefdc136bffbb%3A0x73414ff6594c9191!2sIndian%20Institute%20of%20Technology%20Hyderabad!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
-                
-                <div class="info-item">
-                    <h3>📧 Email</h3>
-                    <p><a href="mailto:bactoconnect@gmail.com">bactoconnect@gmail.com</a></p>
+
+                <div class="contact-form-box">
+                    <form action="https://formspree.io/f/meerjekj" method="POST" class="contact-form">
+
+                        <input type="hidden" name="_next" value="https://cellulose-iith.github.io/">
+
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Email address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="registration">Registration Inquiry</option>
+                                <option value="competition">Competition/Uploads</option>
+                                <option value="Internship">Internship</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
+                <footer>
+                    <div class="footer-content">
+                        <p>&copy; 2026 <a href="https://cellulose-iith.github.io/" target="_blank"
+                                class="footer-link">The Cellulose
+                                Group @ IITH</a> | IIT Hyderabad</p>
 
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.1118331165184!2d78.12051661536761!3d17.596009887953265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbefdc136bffbb%3A0x73414ff6594c9191!2sIndian%20Institute%20of%20Technology%20Hyderabad!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-
-            <div class="contact-form-box">
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your name">
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/events/7435212647228129280?viewAsMember=true"
+                                target="_blank">LinkedIn</a>
+                            <span class="divider">|</span>
+                            <a href="https://instagram.com/your-handle" target="_blank">Instagram</a>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="Email address">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject">
-                            <option value="registration">Registration Inquiry</option>
-                            <option value="competition">Competition/Uploads</option>
-                            <option value="Internship">Internship</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 <a href="https://cellulose-iith.github.io/" target="_blank" class="footer-link">The Cellulose
-                    Group @ IITH</a> | IIT Hyderabad</p>
-
-            <div class="footer-socials">
-                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
-                <span class="divider">|</span>
-                <a href="https://instagram.com/your-handle" target="_blank">Instagram</a>
-            </div>
-        </div>
-    </footer>
+                </footer>
 
 </body>
 
