@@ -1188,3 +1188,31 @@ html {
         margin-top: 10px;
     }
 }
+/* --- Competition Images Styling --- */
+
+.competition-image {
+    display: flex;               /* This forces the images into a row */
+    flex-direction: row;         /* Left-to-right alignment */
+    justify-content: center;     /* Centers the images in the container */
+    align-items: stretch;        /* Ensures both images are the same height */
+    gap: 30px;                   /* Adds a clean space between the two images */
+    margin: 40px auto;           /* Adds space above and below the images */
+    max-width: 500px;           /* Prevents them from getting too massive on huge screens */
+}
+
+.competition-image img {
+    flex: 1;                     /* Tells both images to take up exactly 50% of the space */
+    width: 100%;                 /* Responsive width */
+    height: auto;                /* Maintains the original aspect ratio */
+    border-radius: 12px;         /* Gives the images modern, rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 92, 35, 0.1); /* Subtle green-tinted shadow */
+    object-fit: contain;           /* Prevents the images from stretching if they have different proportions */
+}
+
+/* --- Mobile Responsiveness for Competition Images --- */
+@media (max-width: 768px) {
+    .competition-image {
+        flex-direction: column;  /* Stacks the images one below the other on phones */
+        gap: 20px;
+    }
+}
