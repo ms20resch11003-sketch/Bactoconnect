@@ -1402,3 +1402,66 @@ html {
     /* Slight lift effect */
     box-shadow: 0 4px 12px rgba(10, 102, 194, 0.2);
 }
+
+/* --- Abstract Modal (Pop-up) Styling --- */
+.abstract-modal {
+    display: none;
+    /* Keeps it completely hidden by default */
+    position: fixed;
+    z-index: 2000;
+    /* Ensures it sits on top of absolutely everything else */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    /* Dark transparent overlay */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    border-top: 5px solid #005c23;
+    /* Cellulose green accent line */
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-height: 80vh;
+    /* Prevents it from being taller than the screen */
+    overflow-y: auto;
+    /* Adds a scrollbar inside if the abstract is very long */
+}
+
+.modal-content h2 {
+    color: #005c23;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.modal-content h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* The Close Button */
+.close-btn {
+    color: #999;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #005c23;
+    /* Turns green when hovered */
+}
